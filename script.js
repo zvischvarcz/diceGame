@@ -24,13 +24,15 @@ let totalLosses = 0;
 
 
 const endGame = () => {
-    newGameMsg.textContent = `  Press the new game button to play again.`;
+    newGameMsg.textContent = `  Click new round to play again.`;
     newGameBtn.addEventListener("click", newGame)
     rollBtn.removeEventListener("click", rollDice);
 };       
 
 const newGame = () => {
     totalScore = 0;
+    totalScoreText.textContent = `Score: ${totalScore}`;
+    diceRolledImage.src = ""
     winLoseMsg.textContent = "";
     newGameMsg.textContent = "";
     rollBtn.addEventListener("click", rollDice);
@@ -46,7 +48,6 @@ const rollDice = () => {
 };
 const scoreKeeper = (turnScore) => {
     if (turnScore == 1){
-        totalScore = 0;
         totalLosses += 1;
         lossesText.textContent = `Losses: ${totalLosses}`;
         winLoseMsg.textContent = `You Lose :(`;

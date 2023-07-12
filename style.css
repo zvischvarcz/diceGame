@@ -1,3 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+body {
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: white;
+    
+}
+
+.contains-all-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 95vh;
+    border: 2px solid white; */
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+}
+
+.scores-img-and-btn-wrap {
+    min-width: 25%;
+}
+
+
+.scores-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.score {
+    font-size: 2.5vw;
+}
+
 .dice-image-wrap {
     min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msgs-wrap {
+    font-family: 'Arvo', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 20vh;
+}
+
+.win-lose-msg {
+    font-size: x-large;
+}
+
+.buttons-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-family: 'Lilita One', cursive;
+    padding: 2%;
+    margin: 5%;
+    cursor: pointer;
+    border-radius: 10%;
+    border: none;
+    background-color: rgb(209, 18, 18);
+    color: white;
+}
+
+button:hover {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#rollBtn {
+    font-size: 4vw;
+}
+
+#newGameBtn {
+    font-size: 1.5vw;
 }

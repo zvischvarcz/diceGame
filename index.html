@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice game</title>
+    <link rel="shortcut icon" href="./diceImages/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dice game</h1>
-    <div>
-        <div>
-            <p id="totalScoreText">Score: 0</p>
-            <p id="winsText">Wins: 0</p>
-            <p id="lossesText">Losses: 0</p>
-        </div>
-        <div class="dice-image-wrap">
-            <img  id="diceRolledImage">
-            <p id="winLoseMsg"></p>
-            <p id="newGameMsg"></p>
-        </div>
-        
-        <div>
-            <button id="rollBtn" type="button">Roll</button>
-            <button id="newGameBtn" type="button">New game</button>
+    <div class="contains-all-content">
+        <h1>Dice game</h1>
+        <div class="scores-img-and-btn-wrap">
+            <div class="scores-container">
+                <p class="score" id="totalScoreText">Score: 0</p>
+                <p id="winsText">Wins: 0</p>
+                <p id="lossesText">Losses: 0</p>
+            </div>
+            <div class="dice-image-wrap">
+                <img class="dice-image" id="diceRolledImage">
+            </div>
+            <div class="msgs-wrap">
+                <p class="win-lose-msg" id="winLoseMsg"></p>
+                <p id="newGameMsg"></p>
+            </div>
+            <div class="buttons-wrap">
+                <button id="rollBtn" type="button">Roll</button>
+                <button id="newGameBtn" type="button">New round</button>
+            </div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
