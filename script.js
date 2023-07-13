@@ -26,17 +26,18 @@ const winLoseMsgMultiPlayer = document.getElementById("winLoseMsgMultiPlayer");
 const newGameMsgMultiPlayer = document.getElementById("newGameMsgMultiPlayer");
 const diceRolledImageMP = document.getElementById("diceRolledImageMP");
 const newGameBtnMP = document.getElementById("newGameBtnMP");
+const playersTextWrap = document.getElementById("playersTextWrap");
 
 
 
 
 let diceImages = [
-    "diceImages/one.png",
-    "diceImages/two.png",
-    "diceImages/three.png",
-    "diceImages/four.png",
-    "diceImages/five.png",
-    "diceImages/six.png"    
+    "./diceImages/one.png",
+    "./diceImages/two.png",
+    "./diceImages/three.png",
+    "./diceImages/four.png",
+    "./diceImages/five.png",
+    "./diceImages/six.png"    
 ];
 
 let totalScore = 0;
@@ -183,6 +184,8 @@ const holdP1 = () => {
     rollBtnP1.removeEventListener("click", rollDiceP1);
     rollBtnP2.addEventListener("click", rollDiceP2);
     holdBtnP2.addEventListener("click", holdP2);
+    playersTextWrap.classList.remove("p1s-turn")
+    playersTextWrap.classList.add("p2s-turn")
 }
 
 const rollDiceP2 = () => {
@@ -221,6 +224,8 @@ const holdP2 = () => {
     currentScoreTextP2.textContent = `Current: ${currentScoreP2}`;
     rollBtnP2.removeEventListener("click", rollDiceP2);
     rollBtnP1.addEventListener("click", rollDiceP1);
+    playersTextWrap.classList.add("p1s-turn")
+    playersTextWrap.classList.remove("p2s-turn")
 }
 
 newGame();

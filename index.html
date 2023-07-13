@@ -13,7 +13,7 @@
         <button class="player-btn" id="twoPplBtn">2 players</button>
     </div>
     <h1>Dice game</h1>
-    <div id="containsAllContentSinglePlayer" class="contains-all-content-single-player hidden">
+    <div id="containsAllContentSinglePlayer" class="contains-all-content-single-player">
         <div class="scores-img-and-btn-wrap">
             <div class="scores-container">
                 <p class="score" id="totalScoreText">Score: 0</p>
@@ -35,47 +35,47 @@
     </div>
 <!-- up single player, down multi -->
 
-    <div id="containsAllContentTwoPlayer" class="contains-all-content-two-player ">
-        <div class="display-flex">
-            <p>Player 1</p>
-            <p>Player 2</p>
+    <div id="containsAllContentTwoPlayer" class="contains-all-content-two-player hidden">
+        <div class="display-flex players-text-wrap p1s-turn" id="playersTextWrap">
+            <p class = "players-text">Player 1</p>
+            <p class = "players-text">Player 2</p>
         </div>
-        <div class="display-flex">
-            <div class="display-flex">
-                <p id="winsTextP1">Wins: 0</p>
-                <p id="lossesTextP1">Losses: 0</p>
+        <div class="display-flex wins-losses-wrap ">
+            <div class="display-flex wins-losses-individual-wrap">
+                <p class="wins-losses-text" id="winsTextP1">Wins: 0</p>
+                <p class="wins-losses-text" id="lossesTextP1">Losses: 0</p>
             </div>
-            <div class="display-flex">
-                <p id="winsTextP2">Wins: 0</p>
-                <p id="lossesTextP2">Losses: 0</p>
+            <div class="display-flex wins-losses-individual-wrap">
+                <p class="wins-losses-text" id="winsTextP2">Wins: 0</p>
+                <p class="wins-losses-text" id="lossesTextP2">Losses: 0</p>
             </div>
         </div>
-        <div class="display-flex">
+        <div class="display-flex total-current-scores">
             <p id="totalScoreTextP1">Score: 0</p>
             <p id="totalScoreTextP2">Score: 0</p>
         </div>
-        <div class="display-flex">
+        <div class="display-flex total-current-scores">
             <p id="currentScoreTextP1">Current: 0</p>
             <p id="currentScoreTextP2">Current: 0</p>
         </div>
-        <div>
-            <img src="" id="diceRolledImageMP">
+        <div class="dice-image-mp-wrap ">
+            <img src="" class="dice-image-mp" id="diceRolledImageMP">
         </div>
-        <div class="msgs-wrap">
-            <p class="win-lose-msg" id="winLoseMsgMultiPlayer"></p>
-            <p id="newGameMsgMultiPlayer"></p>
+        <div class="msgs-wrap-mp">
+            <p class="win-lose-msg-mp" id="winLoseMsgMultiPlayer"></p>
+            <p class="win-lose-msg-mp" id="newGameMsgMultiPlayer"></p>
         </div>
-        <div class="display-flex">
-            <div>
-                <button class="roll-new-btns" id="rollBtnP1" type="button">Roll</button>
-                <button class="roll-new-btns" id="holdBtnP1" type="button">Hold</button>
+        <div class="display-flex all-buttons-mp-wrap">
+            <div class="dual-btn-wraps">
+                <button class="roll-new-btns roll-mp-btns" id="rollBtnP1" type="button">Roll</button>
+                <button class="roll-new-btns hold-mp-btns" id="holdBtnP1" type="button">Hold</button>
             </div>
             <div>
-                <button class="roll-new-btns" id="newGameBtnMP" type="button">New round</button>
+                <button class="roll-new-btns new-mp-btn" id="newGameBtnMP" type="button">New round</button>
             </div>
-            <div>
-                <button class="roll-new-btns" id="rollBtnP2" type="button">Roll</button>
-                <button class="roll-new-btns" id="holdBtnP2" type="button">Hold</button>
+            <div class="dual-btn-wraps">
+                <button class="roll-new-btns roll-mp-btns" id="rollBtnP2" type="button">Roll</button>
+                <button class="roll-new-btns hold-mp-btns" id="holdBtnP2" type="button">Hold</button>
             </div>
         </div>
     </div>
