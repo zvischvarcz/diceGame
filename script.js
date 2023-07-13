@@ -6,6 +6,11 @@ const winsText = document.getElementById("winsText");
 const lossesText = document.getElementById("lossesText");
 const winLoseMsg = document.getElementById("winLoseMsg");
 const newGameMsg = document.getElementById("newGameMsg");
+const onePplBtn = document.getElementById("onePplBtn");
+const twoPplBtn = document.getElementById("twoPplBtn");
+const containsAllContentSinglePlayer = document.getElementById("containsAllContentSinglePlayer");
+
+
 
 
 let diceImages = [
@@ -20,6 +25,21 @@ let diceImages = [
 let totalScore = 0;
 let totalWins = 0;
 let totalLosses = 0;
+
+
+twoPplBtn.addEventListener("click", () => {
+    onePplBtn.classList.remove("selected");
+    twoPplBtn.classList.add("selected");
+    containsAllContentSinglePlayer.classList.add("hidden");
+    
+})
+
+onePplBtn.addEventListener("click", () => {
+    onePplBtn.classList.add("selected");
+    twoPplBtn.classList.remove("selected");
+    containsAllContentSinglePlayer.classList.remove("hidden");
+})
+
 
 
 
@@ -48,7 +68,7 @@ const rollDice = () => {
 };
 const scoreKeeper = (turnScore) => {
     if (turnScore == 1){
-        totalLosses += 1;
+        totalLosses ++;
         lossesText.textContent = `Losses: ${totalLosses}`;
         winLoseMsg.textContent = `You Lose :(`;
         endGame();
@@ -58,7 +78,7 @@ const scoreKeeper = (turnScore) => {
     if (totalScore > 20){
         totalScoreText.textContent = `Score: ${totalScore}`;
         totalScore = 0;
-        totalWins += 1;
+        totalWins ++;
         winsText.textContent = `Wins: ${totalWins}`;
         winLoseMsg.textContent = `You Win!`;
         endGame();
