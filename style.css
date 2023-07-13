@@ -105,6 +105,18 @@ h1 {
 #newGameBtn {
     font-size: 1.5vw;
 }
+/* multi player */
+
+
+.contains-all-content-two-player {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-flex {
+    display: flex;
+}
+
 
 .hidden {
     display: none;

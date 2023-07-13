@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice game</title>
-    <link rel="shortcut icon" href="./diceImages/favicon.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="./diceImages/favicon.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <button class="player-btn" id="twoPplBtn">2 players</button>
     </div>
     <h1>Dice game</h1>
-    <div id="containsAllContentSinglePlayer" class="contains-all-content-single-player">
+    <div id="containsAllContentSinglePlayer" class="contains-all-content-single-player hidden">
         <div class="scores-img-and-btn-wrap">
             <div class="scores-container">
                 <p class="score" id="totalScoreText">Score: 0</p>
@@ -21,7 +21,7 @@
                 <p id="lossesText">Losses: 0</p>
             </div>
             <div class="dice-image-wrap">
-                <img class="dice-image" id="diceRolledImage">
+                <img src="" class="dice-image" id="diceRolledImage">
             </div>
             <div class="msgs-wrap">
                 <p class="win-lose-msg" id="winLoseMsg"></p>
@@ -33,6 +33,54 @@
             </div>
         </div>
     </div>
+<!-- up single player, down multi -->
+
+    <div id="containsAllContentTwoPlayer" class="contains-all-content-two-player ">
+        <div class="display-flex">
+            <p>Player 1</p>
+            <p>Player 2</p>
+        </div>
+        <div class="display-flex">
+            <div class="display-flex">
+                <p id="winsTextP1">Wins: 0</p>
+                <p id="lossesTextP1">Losses: 0</p>
+            </div>
+            <div class="display-flex">
+                <p id="winsTextP2">Wins: 0</p>
+                <p id="lossesTextP2">Losses: 0</p>
+            </div>
+        </div>
+        <div class="display-flex">
+            <p id="totalScoreTextP1">Score: 0</p>
+            <p id="totalScoreTextP2">Score: 0</p>
+        </div>
+        <div class="display-flex">
+            <p id="currentScoreTextP1">Current: 0</p>
+            <p id="currentScoreTextP2">Current: 0</p>
+        </div>
+        <div>
+            <img src="" id="diceRolledImageMP">
+        </div>
+        <div class="msgs-wrap">
+            <p class="win-lose-msg" id="winLoseMsgMultiPlayer"></p>
+            <p id="newGameMsgMultiPlayer"></p>
+        </div>
+        <div class="display-flex">
+            <div>
+                <button class="roll-new-btns" id="rollBtnP1" type="button">Roll</button>
+                <button class="roll-new-btns" id="holdBtnP1" type="button">Hold</button>
+            </div>
+            <div>
+                <button class="roll-new-btns" id="newGameBtnMP" type="button">New round</button>
+            </div>
+            <div>
+                <button class="roll-new-btns" id="rollBtnP2" type="button">Roll</button>
+                <button class="roll-new-btns" id="holdBtnP2" type="button">Hold</button>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="script.js"></script>
 </body>
