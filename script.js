@@ -1,3 +1,4 @@
+// Single player elements
 const rollBtn = document.getElementById("rollBtn");
 const newGameBtn = document.getElementById("newGameBtn");
 const diceRolledImage = document.getElementById("diceRolledImage");
@@ -9,6 +10,8 @@ const newGameMsg = document.getElementById("newGameMsg");
 const onePplBtn = document.getElementById("onePplBtn");
 const twoPplBtn = document.getElementById("twoPplBtn");
 const containsAllContentSinglePlayer = document.getElementById("containsAllContentSinglePlayer");
+
+// 2 player elements
 const containsAllContentTwoPlayer = document.getElementById("containsAllContentTwoPlayer");
 const winsTextP1 = document.getElementById("winsTextP1");
 const lossesTextP1 = document.getElementById("lossesTextP1");
@@ -28,9 +31,6 @@ const diceRolledImageMP = document.getElementById("diceRolledImageMP");
 const newGameBtnMP = document.getElementById("newGameBtnMP");
 const playersTextWrap = document.getElementById("playersTextWrap");
 
-
-
-
 let diceImages = [
     "./diceImages/one.png",
     "./diceImages/two.png",
@@ -40,10 +40,12 @@ let diceImages = [
     "./diceImages/six.png"    
 ];
 
+// single player variables
 let totalScore = 0;
 let totalWins = 0;
 let totalLosses = 0;
 
+// 2 player variables
 let totalScoreP1 = 0;
 let currentScoreP1 = 0;
 let totalWinsP1 = 0;
@@ -73,14 +75,14 @@ onePplBtn.addEventListener("click", () => {
 
 const endGame = () => {
     newGameMsg.textContent = `  Click new round to play again.`;
-    newGameBtn.addEventListener("click", newGame)
+    newGameBtn.addEventListener("click", newGame);
     rollBtn.removeEventListener("click", rollDice);
 };       
 
 const newGame = () => {
     totalScore = 0;
     totalScoreText.textContent = `Score: ${totalScore}`;
-    diceRolledImage.src = ""
+    diceRolledImage.src = "";
     winLoseMsg.textContent = "";
     newGameMsg.textContent = "";
     rollBtn.addEventListener("click", rollDice);
@@ -123,7 +125,7 @@ const scoreKeeper = (turnScore) => {
 
 const endGameMP = () => {
     newGameMsgMultiPlayer.textContent = `  Click new round to play again.`;
-    newGameBtnMP.addEventListener("click", newGameMP)
+    newGameBtnMP.addEventListener("click", newGameMP);
     rollBtnP1.removeEventListener("click", rollDiceP1);
     rollBtnP2.removeEventListener("click", rollDiceP2);
     holdBtnP1.removeEventListener("click", holdP1);
@@ -139,7 +141,7 @@ const newGameMP = () => {
     currentScoreP2 = 0;
     currentScoreTextP1.textContent = `Current: ${currentScoreP1}`;
     currentScoreTextP2.textContent = `Current: ${currentScoreP2}`;
-    diceRolledImageMP.src = ""
+    diceRolledImageMP.src = "";
     winLoseMsgMultiPlayer.textContent = "";
     newGameMsgMultiPlayer.textContent = "";
     rollBtnP1.addEventListener("click", rollDiceP1);
@@ -158,7 +160,7 @@ const scoreKeeperP1 = (turnScore) => {
     if (turnScore == 1){
         currentScoreP1 = 0;
         currentScoreTextP1.textContent = `Current: ${currentScoreP1}`;
-        holdP1()
+        holdP1();
     } else {
         currentScoreP1 += turnScore;
     }
@@ -184,8 +186,8 @@ const holdP1 = () => {
     rollBtnP1.removeEventListener("click", rollDiceP1);
     rollBtnP2.addEventListener("click", rollDiceP2);
     holdBtnP2.addEventListener("click", holdP2);
-    playersTextWrap.classList.remove("p1s-turn")
-    playersTextWrap.classList.add("p2s-turn")
+    playersTextWrap.classList.remove("p1s-turn");
+    playersTextWrap.classList.add("p2s-turn");
 }
 
 const rollDiceP2 = () => {
@@ -199,7 +201,7 @@ const scoreKeeperP2 = (turnScore) => {
     if (turnScore == 1){
         currentScoreP2 = 0;
         currentScoreTextP2.textContent = `Current: ${currentScoreP2}`;
-        holdP2()
+        holdP2();
     } else {
         currentScoreP2 += turnScore;
     }
@@ -224,8 +226,8 @@ const holdP2 = () => {
     currentScoreTextP2.textContent = `Current: ${currentScoreP2}`;
     rollBtnP2.removeEventListener("click", rollDiceP2);
     rollBtnP1.addEventListener("click", rollDiceP1);
-    playersTextWrap.classList.add("p1s-turn")
-    playersTextWrap.classList.remove("p2s-turn")
+    playersTextWrap.classList.add("p1s-turn");
+    playersTextWrap.classList.remove("p2s-turn");
 }
 
 newGame();
